@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:adjustViewBounds="true">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvMovie"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:elevation="3dp"
+        card_view:cardUseCompatPadding="true"
+        card_view:cardCornerRadius="5dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/pad_8"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/posterImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/movie_poster" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvTitleHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/pad_8"
+                android:layout_marginStart="@dimen/pad_8"
+                android:layout_marginEnd="@dimen/pad_8"
+                android:text="@string/movieTitle"
+                android:textColor="@color/transparentBlack"
+                android:textSize="@dimen/text_size_regular" />
+
+                <ImageView
+                    android:id="@+id/favouriteIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_marginStart="@dimen/pad_16"
+                    android:src="@drawable/ic_favorite_24white"
+                    android:contentDescription="@string/favouriteIcon" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/pad_2"
+                android:layout_marginStart="@dimen/pad_8"
+                android:layout_marginEnd="@dimen/pad_8"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_medium" />
+
+            <TextView
+                android:id="@+id/tvRatingsHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/pad_8"
+                android:layout_marginStart="@dimen/pad_8"
+                android:layout_marginEnd="@dimen/pad_8"
+                android:text="@string/movieRatings"
+                android:textColor="@color/transparentBlack"
+                android:textSize="@dimen/text_size_regular" />
+
+            <TextView
+                android:id="@+id/tvRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/pad_2"
+                android:layout_marginStart="@dimen/pad_8"
+                android:layout_marginEnd="@dimen/pad_8"
+                android:textColor="@color/black"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:drawablePadding="@dimen/pad_4"
+                android:textSize="@dimen/text_size_medium"
+                card_view:drawableStartCompat="@drawable/star" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
+</androidx.appcompat.widget.LinearLayoutCompat>

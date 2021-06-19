@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MazTestMovieApp</string>
+    <string name="api_key">f8c2fb3301267b649b40cb8d22023776</string>
+    <string name="home">Home</string>
+    <string name="backIcon">Back Arrow</string>
+    <string name="please_wait">Please Wait....</string>
+    <string name="movie_poster">Movie Poster</string>
+    <string name="loading_msg">Please wait, Loading.....</string>
+    <string name="popular_movies">Popular Movies</string>
+    <string name="movie_detail_page">Movie Detail Page</string>
+    <string name="movieLanguage">Movie Language:</string>
+    <string name="movieTitle">Movie Title</string>
+    <string name="movieRatings">Movie Ratings</string>
+    <string name="favouriteIcon">Favourite Icon</string>
+</resources>
