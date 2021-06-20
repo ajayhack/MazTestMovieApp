@@ -14,8 +14,9 @@ class ServiceRepository {
 
     //region==========================Getting Data and Stubbing Data in Modal:-
     fun getMutableLiveData(): MutableLiveData<ArrayList<Results?>>? {
-        val service : ApiClient = getClient().create(ApiClient :: class.java)
-        val call: Call<MovieDBResponse> =service.getPopularMovies("f8c2fb3301267b649b40cb8d22023776")
+        val service: ApiClient = getClient().create(ApiClient::class.java)
+        val call: Call<MovieDBResponse> =
+            service.getPopularMovies("f8c2fb3301267b649b40cb8d22023776")
         call.enqueue(object : Callback<MovieDBResponse?> {
             override fun onResponse(call: Call<MovieDBResponse?>, response: Response<MovieDBResponse?>) {
                 val movieResponse: MovieDBResponse? = response.body()

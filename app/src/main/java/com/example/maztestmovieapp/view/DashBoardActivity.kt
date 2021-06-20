@@ -14,12 +14,12 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.bonushub.pax.model.local.AppDatabase
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.maztestmovieapp.R
 import com.example.maztestmovieapp.databinding.ActivityDashboardBinding
 import com.example.maztestmovieapp.databinding.MovieListItemBinding
+import com.example.maztestmovieapp.model.database.AppDatabase
 import com.example.maztestmovieapp.model.database.Results
 import com.example.maztestmovieapp.utils.BaseActivity
 import com.example.maztestmovieapp.viewmodal.DashboardViewModal
@@ -73,11 +73,11 @@ class DashBoardActivity : BaseActivity() {
     //endregion
 
     //region===============Below method is used to setUp RecyclerView of Top Rated Movies List:-
-    private fun setUpRecyclerView(){
+    private fun setUpRecyclerView() {
         binding?.rvMovies?.apply {
-            layoutManager = if(orientation == Configuration.ORIENTATION_PORTRAIT) {
+            layoutManager = if (orientation == Configuration.ORIENTATION_PORTRAIT) {
                 GridLayoutManager(this@DashBoardActivity, 2)
-            } else{
+            } else {
                 GridLayoutManager(this@DashBoardActivity, 4)
             }
 
@@ -95,6 +95,7 @@ class DashBoardActivity : BaseActivity() {
                 moviesLiveData = popularMovieDataFromDB
                 setUpRecyclerView()
                 hideProgress()
+                Toast.makeText(this@DashBoardActivity, "You are offline", Toast.LENGTH_LONG).show()
             }
         }else {
             lifecycleScope.launch(Dispatchers.Main) {

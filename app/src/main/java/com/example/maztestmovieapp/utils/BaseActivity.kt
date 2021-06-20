@@ -3,11 +3,12 @@ package com.example.maztestmovieapp.utils
 import android.app.Activity
 import android.app.Dialog
 import android.os.Bundle
-import android.view.*
+import android.view.Window
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.maztestmovieapp.R
 
+//region==================Base Activity to create Progress Dialog make other Activity use this functionality by extending this Activity:-
 abstract class BaseActivity : AppCompatActivity(), IDialog {
     private lateinit var progressDialog: Dialog
     lateinit var progressTitleMsg: TextView
@@ -45,3 +46,4 @@ interface IDialog {
     fun showProgress(progressMsg: String = "Please Wait....")
     fun hideProgress()
 }
+//endregion

@@ -1,11 +1,6 @@
 package com.example.maztestmovieapp.service
 
-import android.util.Log
 import com.example.maztestmovieapp.model.MovieDBResponse
-import kotlinx.coroutines.CoroutineExceptionHandler
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Call
@@ -47,19 +42,9 @@ fun getClient(): Retrofit {
 }
 //endregion
 
-//region========================CoroutineExceptionHandler:-
-fun coroutineExceptionHandler(): CoroutineExceptionHandler {
-    return CoroutineExceptionHandler { _, t ->
-        GlobalScope.launch(Dispatchers.Main) {
-            t.printStackTrace()
-            Log.d("Failed To Connect", "Server Error")
-        }
-    }
-}
-//endregion
-
-
+//region=================API Client to used with Retrofit Request:-
 internal interface ApiClient{
     @GET("movie/popular")
     fun getPopularMovies(@Query("api_key") apiKey: String?): Call<MovieDBResponse>
 }
+//endregion

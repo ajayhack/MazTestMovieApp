@@ -1,4 +1,4 @@
-package com.bonushub.pax.model.local
+package com.example.maztestmovieapp.model.database
 
 import android.content.Context
 import androidx.room.Database
@@ -7,11 +7,6 @@ import androidx.room.RoomDatabase
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 import com.example.maztestmovieapp.model.database.*
-
-
-/**
- * =========Written By Ajay Thakur (18th Nov 2020)==========
- **/
 
 @Database(
     entities = [Results::class],
@@ -25,7 +20,7 @@ abstract class AppDatabase : RoomDatabase() {
 
     companion object {
         private var dbInstance: AppDatabase? = null
-        private var dbName: String = "HdfcDB"
+        private var dbName: String = "mazMovieDB"
 
         @Synchronized
         fun getDatabase(context: Context): AppDatabase? {
