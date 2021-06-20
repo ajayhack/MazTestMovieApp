@@ -1,6 +1,9 @@
 # MazTestMovieApp
 This is a Popular Movie App Which is showing Top Popular Movies in a Grid List.
 
+#Design Pattern used:-
+This App is implemneted using MVVM Design Patern in Android.
+
 #Language Used to Develop the App:-
 100% Kotlin is used in all the modules in the app for development.
 
